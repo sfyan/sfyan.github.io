@@ -50,14 +50,14 @@
   };
 </script>
 
-  <meta name="description" content="Package.json &amp;quot;scripts&amp;quot;: {&amp;quot;dev&amp;quot;:webpack-dev-server --open --port 3000 --contentBase&amp;quot;},  自动更新打包文件  生成在指定端口的localhost并打开窗口  –contentBase：自动打开根目录">
+  <meta name="description" content="Package.json文件 &amp;quot;scripts&amp;quot;: {&amp;quot;dev&amp;quot;:webpack-dev-server --open --port 3000 --contentBase src --hot},  webpack-dev-server可自动更新打包文件  --open --port 3000 在指定端口3000生成localhost并打开窗口  --conte">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack-dev-server的使用方法">
 <meta property="og:url" content="https:&#x2F;&#x2F;sfyan.github.io&#x2F;2019&#x2F;11&#x2F;05&#x2F;Post2&#x2F;index.html">
 <meta property="og:site_name" content=" Front End Frontier">
-<meta property="og:description" content="Package.json &amp;quot;scripts&amp;quot;: {&amp;quot;dev&amp;quot;:webpack-dev-server --open --port 3000 --contentBase&amp;quot;},  自动更新打包文件  生成在指定端口的localhost并打开窗口  –contentBase：自动打开根目录">
+<meta property="og:description" content="Package.json文件 &amp;quot;scripts&amp;quot;: {&amp;quot;dev&amp;quot;:webpack-dev-server --open --port 3000 --contentBase src --hot},  webpack-dev-server可自动更新打包文件  --open --port 3000 在指定端口3000生成localhost并打开窗口  --conte">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-05T14:55:09.000Z">
+<meta property="og:updated_time" content="2019-11-06T13:25:08.000Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://sfyan.github.io/2019/11/05/Post2/">
@@ -218,10 +218,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-05 22:49:11 / 修改时间：22:55:09" itemprop="dateCreated datePublished" datetime="2019-11-05T22:49:11+08:00">2019-11-05</time>
+              <time title="创建时间：2019-11-05 22:49:11" itemprop="dateCreated datePublished" datetime="2019-11-05T22:49:11+08:00">2019-11-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-06 21:25:08" itemprop="dateModified" datetime="2019-11-06T21:25:08+08:00">2019-11-06</time>
+              </span>
 
           
 
@@ -234,16 +240,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><font size=2px color=red>Package.json</font></p>
+        <p><font size=2px color=red>Package.json文件</font></p>
 <p><code>&quot;scripts&quot;:</code></p>
 <p><code>{&quot;dev&quot;:webpack-dev-server</code></p>
-<p><code>--open --port 3000 --contentBase&quot;},</code></p>
+<p><code>--open --port 3000 --contentBase src --hot},</code></p>
 <ul>
-<li><p>自动更新打包文件</p>
+<li><p>webpack-dev-server可自动更新打包文件</p>
 </li>
-<li><p>生成在指定端口的localhost并打开窗口</p>
+<li><p><code>--open --port 3000</code> 在指定端口3000生成localhost并打开窗口</p>
 </li>
-<li><p>–contentBase：自动打开根目录</p>
+<li><p><code>--contentBase src</code> 指定托管的根目录</p>
+</li>
+<li><p><code>--hot</code> 启用热更新</p>
 </li>
 </ul>
 
