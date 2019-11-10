@@ -50,17 +50,17 @@
   };
 </script>
 
-  <meta name="description" content="*设计作品集">
-<meta property="og:type" content="website">
-<meta property="og:title" content="下载">
-<meta property="og:url" content="https:&#x2F;&#x2F;sfyan.github.io&#x2F;download&#x2F;index.html">
+  <meta name="description" content="JS文件中import ‘.&#x2F;css&#x2F;index.css&amp;#39; 无法直接生效，是由于：Webpack 只能打包处理JS类型的文件，无法处理其他非JS文件。针对非JS类型的文件的处理，需要手动安装第三方loader加载器。 处理css文件步骤如下：  安装 npm i style-loader css-loader less-loader sass-loader url-loader file-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack的css loader、url loader">
+<meta property="og:url" content="https:&#x2F;&#x2F;sfyan.github.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;webpack-loader&#x2F;index.html">
 <meta property="og:site_name" content=" Front End Frontier">
-<meta property="og:description" content="*设计作品集">
+<meta property="og:description" content="JS文件中import ‘.&#x2F;css&#x2F;index.css&amp;#39; 无法直接生效，是由于：Webpack 只能打包处理JS类型的文件，无法处理其他非JS文件。针对非JS类型的文件的处理，需要手动安装第三方loader加载器。 处理css文件步骤如下：  安装 npm i style-loader css-loader less-loader sass-loader url-loader file-">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-04T13:21:30.000Z">
+<meta property="og:updated_time" content="2019-11-10T14:39:17.000Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://sfyan.github.io/download/">
+<link rel="canonical" href="https://sfyan.github.io/2019/11/10/webpack-loader/">
 
 
 <script id="page-configurations">
@@ -68,14 +68,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>下载 |  Front End Frontier
-  </title>
+  <title>webpack的css loader、url loader |  Front End Frontier</title>
   
 
 
@@ -188,45 +187,97 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sfyan.github.io/2019/11/10/webpack-loader/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Sean Yan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content=" Front End Frontier">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          webpack的css loader、url loader
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">下载
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2019-11-10 22:38:08 / 修改时间：22:39:17" itemprop="dateCreated datePublished" datetime="2019-11-10T22:38:08+08:00">2019-11-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>JS文件中<code>import ‘./css/index.css&#39;</code> 无法直接生效，是由于：Webpack 只能打包处理JS类型的文件，无法处理其他非JS文件。针对非JS类型的文件的处理，需要手动安装第三方loader加载器。</p>
+<p>处理css文件步骤如下：</p>
+<ol>
+<li>安装 <code>npm i style-loader css-loader less-loader sass-loader url-loader file-loader -D</code> </li>
+</ol>
+<p>(sass-loader需要安装node-sass <code>npm i node-sass -D</code>，url-loader需要安装file-loader）</p>
+<ol start="2">
+<li>打开配置文件<strong>webpack.config.js</strong>，新增配置节点<code>module</code>(对象），在这个<code>module</code>对象内部，有个<code>rules</code>属性（数组），该属性存放了所有第三方文件的匹配和处理规则。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>:&#123;</span><br><span class="line">​		rules:&#123;</span><br><span class="line">​			&#123; <span class="attr">tests</span>:<span class="regexp">/\.css$/</span>, <span class="attr">use</span>: [<span class="string">'style-loader'</span>,<span class="string">'css-loader'</span>]&#125;, <span class="comment">//配置css loader</span></span><br><span class="line">&#123; <span class="attr">tests</span>:<span class="regexp">/\.less$/</span>, <span class="attr">use</span>: [<span class="string">'style-loader'</span>,<span class="string">'css-loader'</span>,<span class="string">'less-loader'</span>]&#125;, <span class="comment">//配置less loader</span></span><br><span class="line">&#123; <span class="attr">tests</span>:<span class="regexp">/\.less$/</span>, <span class="attr">use</span>: [<span class="string">'style-loader'</span>,<span class="string">'css-loader'</span>,<span class="string">'sass-loader'</span>]&#125;, <span class="comment">//配置sass loader</span></span><br><span class="line">&#123; <span class="attr">tests</span>:<span class="regexp">/\.（jpg|png|gif|bmp|jpeg)$/</span>, <span class="attr">use</span>: [<span class="string">'url-loader?limit=7631&amp;name=[hash:8]-[name].[ext]'</span>]&#125;, <span class="comment">//处理图片路径的loader,limit给定的值是图片的大小(byte),如果图片大于或等于limit，则不会被转译为base64的字符串,name可指定图片名</span></span><br><span class="line">&#123; <span class="attr">tests</span>:<span class="regexp">/\.（jpg|png|gif|bmp|jpeg)$/</span>, <span class="attr">use</span>: [<span class="string">'url-loader'</span>]&#125;, <span class="comment">//处理字体路径的loader</span></span><br><span class="line">​		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>调用规则：从右到左</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/11/05/Post2/" rel="next" title="webpack-dev-server的使用方法">
+                  <i class="fa fa-chevron-left"></i> webpack-dev-server的使用方法
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <p>*<a href="https://sfyan.github.io/download/portfolio.pdf">设计作品集</a></p>
-
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
   </div>
 
 
