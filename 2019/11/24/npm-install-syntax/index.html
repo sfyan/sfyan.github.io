@@ -50,15 +50,17 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https:&#x2F;&#x2F;sfyan.github.io&#x2F;about&#x2F;index.html">
+  <meta name="description" content="作者：itxing链接：https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;2e7f3b69e51e来源：简书 npm install module_name -S 即 npm install module_name --save 写入dependencies npm install module_name -D    即    npm install module_name --save-dev">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm install -S -D -g的区别">
+<meta property="og:url" content="https:&#x2F;&#x2F;sfyan.github.io&#x2F;2019&#x2F;11&#x2F;24&#x2F;npm-install-syntax&#x2F;index.html">
 <meta property="og:site_name" content=" Front End Frontier">
+<meta property="og:description" content="作者：itxing链接：https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;2e7f3b69e51e来源：简书 npm install module_name -S 即 npm install module_name --save 写入dependencies npm install module_name -D    即    npm install module_name --save-dev">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-31T16:35:38.000Z">
+<meta property="og:updated_time" content="2019-11-24T07:17:47.000Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://sfyan.github.io/about/">
+<link rel="canonical" href="https://sfyan.github.io/2019/11/24/npm-install-syntax/">
 
 
 <script id="page-configurations">
@@ -66,14 +68,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>about |  Front End Frontier
-  </title>
+  <title>npm install -S -D -g的区别 |  Front End Frontier</title>
   
 
 
@@ -186,44 +187,94 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sfyan.github.io/2019/11/24/npm-install-syntax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Sean Yan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content=" Front End Frontier">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          npm install -S -D -g的区别
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">about
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2019-11-24 15:12:13 / 修改时间：15:17:47" itemprop="dateCreated datePublished" datetime="2019-11-24T15:12:13+08:00">2019-11-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>作者：itxing<br>链接：<a href="https://www.jianshu.com/p/2e7f3b69e51e" target="_blank" rel="noopener">https://www.jianshu.com/p/2e7f3b69e51e</a><br>来源：简书</p>
+<p><code>npm install module_name -S</code> 即 <code>npm install module_name --save</code> 写入dependencies</p>
+<p><code>npm install module_name -D</code>    即    <code>npm install module_name --save-dev</code> 写入devDependencies</p>
+<p><code>npm install module_name -g</code> 全局安装(命令行使用)</p>
+<p><code>npm install module_name</code> 本地安装(将安装包放在 ./node_modules 下)</p>
+<p><strong>dependencies与devDependencies有什么区别呢？</strong></p>
+<p>devDependencies里面的插件只用于开发环境，不用于生产环境</p>
+<p>dependencies是需要发布到生产环境的</p>
+<p><strong>举个例子：</strong></p>
+<p>你开发一个前端项目，在项目中你需要使用gulp构建你的开发和本地运行环境,这时你就要放到dependencies里。gulp是你用来压缩代码，打包等需要的工具，程序实际运行的时候并不需要，所以放到dev里就ok了。</p>
+<p>你写程序要用element-ui,生产环境运行项目时肯定要用到element-ui,这时element-ui就应该安装到dependencies中去。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/11/10/webpack-loader/" rel="next" title="webpack的css loader、url loader">
+                  <i class="fa fa-chevron-left"></i> webpack的css loader、url loader
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
   </div>
 
 
