@@ -1,0 +1,49 @@
+body{
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+header{
+  line-height: 66px;
+  background: #234ea1;
+  color:#fff;
+}
+footer{
+  line-height: 40px;
+  background: #234ea1;
+  color:#fff;
+  font-size:10px;
+  font-weight:300;
+}
+article{
+  padding: 50px;
+  height:80%;
+  background:#9cbdeb;
+  text-align: center;
+}
+
+article a{
+    color:#333;
+}
+
+.project{
+  margin:50px 0;
+}
+/* 父元素设置flex，然后布局方向为主轴从上到下，那么header和footer就会在最上边和最下边 */
+html,body{
+  height: 100%;
+  margin: 0;
+  /* 不设置100%，高度撑不开 */
+}
+.container{
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+article{
+  flex: 1;
+}
