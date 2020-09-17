@@ -193,6 +193,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sfyan.github.io/2020/01/07/reactnote/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Sean Yan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content=" Front End Frontier">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/07/reactnote/" class="post-title-link" itemprop="url">React学习笔记-组件的生命周期</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-07 22:09:04 / 修改时间：22:24:10" itemprop="dateCreated datePublished" datetime="2020-01-07T22:09:04+08:00">2020-01-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8E%9F%E5%88%9B/" itemprop="url" rel="index">
+                    <span itemprop="name">原创</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8E%9F%E5%88%9B/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <hr>
+<p>钩子函数</p>
+<p>组件创建阶段(1次）:<br><code>static defaultProps={}</code><br><code>this.state={}</code><br><code>componentWillMount</code> 可使用setState<br><code>render</code><br><code>componentDidMount</code>    可使用setState</p>
+<p>组件运行阶段（&gt;=0次）:<br><code>componentWillReceiveProps</code> 可使用setState<br><code>shouldComponentUpdate</code><br><code>componentWillUpdate</code><br><code>render</code><br><code>componentDidUpdate</code></p>
+<p>组件销毁阶段(1次）:<br><code>componentWillUnmout</code></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://sfyan.github.io/2020/01/07/RN-Booking-APP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -267,86 +347,6 @@
 <p>作为一个前设计师，我感觉UI还原是没什么问题了。这里还要感谢一下大设计师Lulu，为APP提供了连Booking主APP都没有的loading动画。<br>但是功能上肯定还是有很多尚未完成和需要提高的地方，希望在接下来的版本可以改进。目前安卓APP已经全面测试，可以移步<a href="https://github.com/sfyan/react-native-booking-app" target="_blank" rel="noopener">GitHub</a> 获取APK。IOS版也随时可以从RN项目导出，由于尚未测试就暂时不公布了。</p>
 <h4 id="主要Components"><a href="#主要Components" class="headerlink" title="主要Components"></a>主要Components</h4><p><code>Home.js</code> : <code>TopBar.js</code> <code>SearchBox.js</code> <code>DiscountSection.js</code> <code>Menu.js</code> <code>Setting.js</code><br><code>SearchResult.js</code>:<code>FilterBar.js</code> <code>FilterMenu.js</code> <code>SRTopBar.js</code> <code>HotelBox.js</code></p>
 <h4 id="项目截图"><a href="#项目截图" class="headerlink" title="项目截图"></a>项目截图</h4><p><img src="/2020/01/07/RN-Booking-APP/ss1.jpg" alt><br><img src="/2020/01/07/RN-Booking-APP/ss2.jpg" alt></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sfyan.github.io/2020/01/07/reactnote/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Sean Yan">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content=" Front End Frontier">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/07/reactnote/" class="post-title-link" itemprop="url">React学习笔记-组件的生命周期</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-07 22:09:04 / 修改时间：22:24:10" itemprop="dateCreated datePublished" datetime="2020-01-07T22:09:04+08:00">2020-01-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8E%9F%E5%88%9B/" itemprop="url" rel="index">
-                    <span itemprop="name">原创</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8E%9F%E5%88%9B/react/" itemprop="url" rel="index">
-                    <span itemprop="name">react</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr>
-<p>钩子函数</p>
-<p>组件创建阶段(1次）:<br><code>static defaultProps={}</code><br><code>this.state={}</code><br><code>componentWillMount</code> 可使用setState<br><code>render</code><br><code>componentDidMount</code>    可使用setState</p>
-<p>组件运行阶段（&gt;=0次）:<br><code>componentWillReceiveProps</code> 可使用setState<br><code>shouldComponentUpdate</code><br><code>componentWillUpdate</code><br><code>render</code><br><code>componentDidUpdate</code></p>
-<p>组件销毁阶段(1次）:<br><code>componentWillUnmout</code></p>
 
       
     </div>
